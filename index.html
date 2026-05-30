@@ -8,51 +8,99 @@
   <style>
     body { 
       font-family: 'Courier New', monospace; 
-      background: #0a0a0a; 
+      background: #0a0a0a;
     }
-    .pixel { image-rendering: pixelated; }
-    
+    .pixel { 
+      image-rendering: pixelated; 
+    }
     .gallery-img {
-      animation: float 5s ease-in-out infinite;
-      transition: all 0.4s ease;
+      animation: float 4.5s ease-in-out infinite;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid #27272a;
+    }
+    .gallery-img:hover {
+      transform: scale(1.08) rotate(2deg);
+      border-color: #22c55e;
+      filter: brightness(1.15) drop-shadow(0 0 25px rgba(74, 222, 128, 0.5));
     }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+      50% { transform: translateY(-20px); }
     }
   </style>
 </head>
-<body class="text-white">
+<body class="bg-[#0a0a0a] text-white">
 
-  <nav class="bg-black border-b border-zinc-800 py-5">
-    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-3xl">👊</div>
-        <h1 class="text-2xl font-bold">OBEYPUNKS</h1>
+  <!-- Navbar -->
+  <nav class="border-b border-zinc-800 bg-black/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center text-4xl shadow-lg shadow-green-500/50">👊</div>
+        <h1 class="text-3xl font-bold tracking-widest">OBEYPUNKS</h1>
+      </div>
+      <div class="flex gap-10 text-sm font-medium">
+        <a href="#gallery" class="hover:text-green-400 transition">GALLERY</a>
+        <a href="#details" class="hover:text-green-400 transition">DETAILS</a>
       </div>
     </div>
   </nav>
 
-  <section class="max-w-6xl mx-auto px-6 pt-12 text-center">
-    <p class="text-yellow-400 tracking-widest text-sm mb-3">COLLECTION LOOK</p>
-    <h1 class="text-6xl font-bold leading-none mb-12">
-      OBEYPUNKS<br>
-      <span class="text-green-400">EDITION</span>
-    </h1>
+  <!-- Hero Gallery -->
+  <section id="gallery" class="pt-20 pb-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-yellow-400 tracking-[4px] text-sm mb-4">COLLECTION LOOK</p>
+      <h1 class="text-6xl md:text-7xl font-bold leading-none mb-16">
+        OBEYPUNKS<br>
+        <span class="text-green-400">EDITION</span>
+      </h1>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <img src="assets/078602110a1d25cfe9186dcfb63f5ff8.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/0c703681081531c984f3b1533ea2dca5.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/7869885b6f0f8459dd63eefb6044391a.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/8870c62fb01cb7289418fc658fda940.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/8b9e1e5ba70ecb120359b152d276af57.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/9e98edc52fba61456fabcf0ce7f8b339.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/cb4a743b5ac9751f7db9024a780ca524.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <img src="assets/d1d746bcaf29f01c10bda5fee1b9b38f.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      <!-- Hapus yang ini kalau masih error -->
-      <!-- <img src="assets/fdd5a596f5db5db919147ef3b5e7abf1.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt=""> -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <img src="assets/078602110a1d25cfe9186dcfb63f5ff8.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/0c703681081531c984f3b1533ea2dca5.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/7869885b6f0f8459dd63eefb6044391a.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/8870c62fb01cb7289418fc658fda940.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/8b9e1e5ba70ecb120359b152d276af57.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/9e98edc52fba61456fabcf0ce7f8b339.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/cb4a743b5ac9751f7db9024a780ca524.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/d1d746bcaf29f01c10bda5fee1b9b38f.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+        <img src="assets/fdd5a596f5db5db919147ef3b5e7abf1.png" class="gallery-img pixel rounded-3xl" alt="ObeyPunk">
+      </div>
     </div>
   </section>
+
+  <!-- Details -->
+  <section id="details" class="py-20 border-t border-zinc-800 bg-black">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-yellow-400 text-sm tracking-widest mb-3">COLLECTION SPECS</p>
+      <h2 class="text-5xl font-bold mb-12">OBEYPUNKS DETAILS</h2>
+      
+      <div class="space-y-8">
+        <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+          <div class="flex gap-6">
+            <div class="bg-pink-600 w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0">01</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-3">1:1 TO ORIGINALS</h3>
+              <p class="text-zinc-400">ObeyPunks is a 1:1 reinterpretation of the legendary CryptoPunks with Obey Giant attitude.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+          <div class="flex gap-6">
+            <div class="bg-pink-600 w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0">02</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-3">FREE MINT</h3>
+              <p class="text-zinc-400">Free mint available for Whitelist only.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-zinc-500 text-sm border-t border-zinc-800">
+    <p>© 2026 ObeyPunks • All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
