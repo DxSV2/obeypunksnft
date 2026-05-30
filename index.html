@@ -6,7 +6,7 @@
   <title>ObeyPunks</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Courier New', monospace; }
+    body { font-family: 'Courier New', monospace; background: #0a0a0a; }
     .pixel { image-rendering: pixelated; }
     
     .gallery-img {
@@ -14,41 +14,35 @@
       transition: all 0.4s ease;
       width: 100%;
       height: auto;
+      border-radius: 12px;
     }
     
     .gallery-img:nth-child(2) { animation-delay: 0.3s; }
-    .gallery-img:nth-child(3) { animation-delay: 1.0s; }
-    .gallery-img:nth-child(4) { animation-delay: 0.6s; }
-    .gallery-img:nth-child(5) { animation-delay: 1.7s; }
-    .gallery-img:nth-child(6) { animation-delay: 0.4s; }
-    .gallery-img:nth-child(7) { animation-delay: 1.3s; }
-    .gallery-img:nth-child(8) { animation-delay: 1.9s; }
-    .gallery-img:nth-child(9) { animation-delay: 0.8s; }
+    .gallery-img:nth-child(3) { animation-delay: 1.1s; }
+    .gallery-img:nth-child(4) { animation-delay: 0.7s; }
+    .gallery-img:nth-child(5) { animation-delay: 1.8s; }
+    .gallery-img:nth-child(6) { animation-delay: 0.5s; }
+    .gallery-img:nth-child(7) { animation-delay: 1.4s; }
+    .gallery-img:nth-child(8) { animation-delay: 2.0s; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
+      50% { transform: translateY(-18px); }
     }
 
     .gallery-img:hover {
-      transform: scale(1.1) rotate(3deg);
-      filter: brightness(1.15) drop-shadow(0 0 30px rgb(74 222 128));
-    }
-
-    /* Style Details seperti PopPunks */
-    .detail-card {
-      background-color: #18181b;
-      border: 1px solid #3f3f46;
+      transform: scale(1.08) rotate(3deg);
+      filter: brightness(1.2);
     }
   </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="text-white">
 
   <!-- Navbar -->
   <nav class="border-b border-zinc-800 bg-black sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-3xl border-2 border-white">👊</div>
+        <div class="w-11 h-11 bg-green-500 rounded-xl flex items-center justify-center text-3xl border border-white">👊</div>
         <h1 class="text-2xl font-bold tracking-widest">OBEYPUNKS</h1>
       </div>
       <div class="flex gap-8 text-sm font-medium">
@@ -68,47 +62,15 @@
       </h2>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        <img src="assets/078602110a1d25cfe9186dcfb63f5ff8.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/0c703681081531c984f3b1533ea2dca5.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/7869885b6f0f8459dd63eefb6044391a.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/8870c62fb01cb7289418fc658fda940.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/8b9e1e5ba70ecb120359b152d276af57.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/9e98edc52fba61456fabcf0ce7f8b339.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/cb4a743b5ac9751f7db9024a780ca524.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/d1d746bcaf29f01c10bda5fee1b9b38f.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-        <img src="assets/fdd5a596f5db5db919147ef3b5e7abf1.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
-      </div>
-    </div>
-  </section>
-
-  <!-- Details Section (mirip PopPunks) -->
-  <section id="details" class="py-20 bg-black border-t border-zinc-800">
-    <div class="max-w-4xl mx-auto px-6">
-      <p class="text-yellow-400 text-sm tracking-widest mb-3">COLLECTION SPECS</p>
-      <h2 class="text-5xl font-bold mb-12">OBEYPUNKS DETAILS</h2>
-      
-      <div class="space-y-6">
-        <div class="detail-card rounded-3xl p-8">
-          <div class="flex gap-6">
-            <div class="bg-pink-500 text-black w-11 h-11 rounded-2xl flex-shrink-0 flex items-center justify-center font-bold text-2xl">01</div>
-            <div>
-              <h3 class="text-2xl font-bold mb-2">1:1 TO ORIGINALS</h3>
-              <p class="text-zinc-400">ObeyPunks maps one-for-one to the original 10,000 CryptoPunks, preserving each token identity with Obey Giant style.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-card rounded-3xl p-8">
-          <div class="flex gap-6">
-            <div class="bg-pink-500 text-black w-11 h-11 rounded-2xl flex-shrink-0 flex items-center justify-center font-bold text-2xl">02</div>
-            <div>
-              <h3 class="text-2xl font-bold mb-2">FREE MINT</h3>
-              <p class="text-zinc-400">Free mint available for Whitelist only.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Kamu bisa tambah card lain di sini -->
+        <img src="assets/078602110a1d25cfe9186dcfb63f5ff8.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/0c703681081531c984f3b1533ea2dca5.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/7869885b6f0f8459dd63eefb6044391a.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/8870c62fb01cb7289418fc658fda940.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/8b9e1e5ba70ecb120359b152d276af57.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/9e98edc52fba61456fabcf0ce7f8b339.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/cb4a743b5ac9751f7db9024a780ca524.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/d1d746bcaf29f01c10bda5fee1b9b38f.png" class="gallery-img pixel border border-zinc-700" alt="">
+        <img src="assets/fdd5a596f5db5db919147ef3b5e7abf1.png" class="gallery-img pixel border border-zinc-700" alt="">
       </div>
     </div>
   </section>
