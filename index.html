@@ -10,30 +10,29 @@
     .pixel { image-rendering: pixelated; }
     
     .gallery-img {
-      animation: float 5.5s ease-in-out infinite;
+      animation: float 5s ease-in-out infinite;
       transition: all 0.4s ease;
       width: 100%;
       height: auto;
-      object-fit: contain;
     }
     
-    .gallery-img:nth-child(2) { animation-delay: 0.4s; }
-    .gallery-img:nth-child(3) { animation-delay: 1.2s; }
-    .gallery-img:nth-child(4) { animation-delay: 0.8s; }
-    .gallery-img:nth-child(5) { animation-delay: 1.9s; }
-    .gallery-img:nth-child(6) { animation-delay: 0.5s; }
-    .gallery-img:nth-child(7) { animation-delay: 1.6s; }
-    .gallery-img:nth-child(8) { animation-delay: 2.1s; }
-    .gallery-img:nth-child(9) { animation-delay: 1.0s; }
+    .gallery-img:nth-child(2) { animation-delay: 0.3s; }
+    .gallery-img:nth-child(3) { animation-delay: 1.0s; }
+    .gallery-img:nth-child(4) { animation-delay: 0.6s; }
+    .gallery-img:nth-child(5) { animation-delay: 1.7s; }
+    .gallery-img:nth-child(6) { animation-delay: 0.4s; }
+    .gallery-img:nth-child(7) { animation-delay: 1.3s; }
+    .gallery-img:nth-child(8) { animation-delay: 1.9s; }
+    .gallery-img:nth-child(9) { animation-delay: 0.8s; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-18px); }
+      50% { transform: translateY(-20px); }
     }
 
     .gallery-img:hover {
-      transform: scale(1.08) rotate(3deg) !important;
-      filter: brightness(1.2) drop-shadow(0 0 30px rgb(74 222 128));
+      transform: scale(1.1) rotate(3deg);
+      filter: brightness(1.15) drop-shadow(0 0 30px rgb(74 222 128));
     }
   </style>
 </head>
@@ -53,16 +52,16 @@
     </div>
   </nav>
 
-  <!-- Gallery -->
-  <section id="gallery" class="pt-12 pb-20 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-      <p class="text-yellow-400 text-sm tracking-[3px] mb-2">COLLECTION LOOK</p>
-      <h2 class="text-5xl md:text-6xl font-bold leading-none mb-10">
+  <!-- Gallery Section -->
+  <section id="gallery" class="pt-16 pb-24 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-yellow-400 text-sm tracking-widest mb-3">COLLECTION LOOK</p>
+      <h2 class="text-5xl md:text-6xl font-bold leading-none mb-8">
         CLASSIC PUNKS.<br>
         <span class="text-green-400">OBEY EDITION</span>
       </h2>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <img src="assets/078602110a1d25cfe9186dcfb63f5ff8.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
         <img src="assets/0c703681081531c984f3b1533ea2dca5.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
         <img src="assets/7869885b6f0f8459dd63eefb6044391a.png" class="gallery-img pixel rounded-2xl border border-zinc-700" alt="">
@@ -88,7 +87,7 @@
             <div class="bg-green-500 text-black w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-2xl">01</div>
             <div>
               <h3 class="text-2xl font-bold">1:1 TO ORIGINALS</h3>
-              <p class="text-zinc-400 mt-3">ObeyPunks is a 1:1 reinterpretation of the classic CryptoPunks with Obey Giant style.</p>
+              <p class="text-zinc-400 mt-3">ObeyPunks maps one-for-one to the original CryptoPunks collection with Obey style.</p>
             </div>
           </div>
         </div>
